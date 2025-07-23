@@ -1,23 +1,23 @@
-/* Enhanced CSS with Beautiful Light Red Theme */
+/* Enhanced CSS with Beautiful Dark Theme - Black & Red */
 :root {
-  /* Beautiful Light Red Theme Colors */
-  --primary-color: #ff6b6b;
-  --secondary-color: #ff8a8a;
-  --accent-color: #ffa8a8;
+  /* Beautiful Dark Theme Colors - Black & Red */
+  --primary-color: #ff4444;
+  --secondary-color: #ff6666;
+  --accent-color: #ff8888;
   --purple-accent: #d946ef;
   --orange-accent: #f59e0b;
   --green-accent: #10b981;
-  --text-color: #1f2937;
-  --text-secondary: #6b7280;
-  --bg-color: #fef2f2;
-  --bg-secondary: #fee2e2;
-  --white: #ffffff;
-  --shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
-  --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.25);
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --bg-color: #000000;
+  --bg-secondary: #111111;
+  --white: #1a1a1a;
+  --shadow: 0 4px 20px rgba(255, 68, 68, 0.3);
+  --shadow-hover: 0 8px 30px rgba(255, 68, 68, 0.5);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-primary: linear-gradient(135deg, #ff6b6b, #ff8a8a);
-  --gradient-secondary: linear-gradient(135deg, #ff8a8a, #ffa8a8);
-  --gradient-accent: linear-gradient(135deg, #ffa8a8, #f59e0b);
+  --gradient-primary: linear-gradient(135deg, #ff4444, #ff6666);
+  --gradient-secondary: linear-gradient(135deg, #ff6666, #ff8888);
+  --gradient-accent: linear-gradient(135deg, #ff8888, #f59e0b);
 }
 
 * {
@@ -32,6 +32,8 @@ body {
   color: var(--text-color);
   transition: var(--transition);
   overflow-x: hidden;
+  width: 100%;
+  line-height: 1.7;
 }
 
 /* Enhanced Welcome Banner */
@@ -103,13 +105,15 @@ body {
 header {
   background: var(--gradient-primary);
   box-shadow: var(--shadow);
-  padding: 20px 20px;
+  padding: 40px 5%;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: var(--transition);
   border-bottom: 2px solid var(--accent-color);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 header h1 {
@@ -153,15 +157,16 @@ nav a:hover {
 }
 
 section {
-  max-width: 1200px;
-  margin: 80px auto;
+  width: 100%;
+  margin: 0;
   background: var(--white);
-  padding: 60px;
-  border-radius: 25px;
-  box-shadow: var(--shadow);
-  border: 2px solid rgba(255, 107, 107, 0.2);
+  padding: 80px 5%;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid rgba(255, 68, 68, 0.3);
   transition: var(--transition);
-  min-height: 500px;
+  min-height: 100vh;
 }
 
 section:hover {
@@ -205,13 +210,13 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--primary-color);
-  box-shadow: 0 8px 30px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 68, 68, 0.5);
   transition: var(--transition);
 }
 
 .profile-photo:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 12px 40px rgba(255, 68, 68, 0.6);
 }
 
 .about-text {
@@ -325,10 +330,10 @@ ul li {
 }
 
 .skills-list ul li {
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(255, 138, 138, 0.08));
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 102, 102, 0.15));
   padding: 20px 25px;
   border-radius: 12px;
-  border: 2px solid rgba(255, 107, 107, 0.2);
+  border: 2px solid rgba(255, 68, 68, 0.4);
   transition: var(--transition);
   font-size: 18px;
   font-weight: 600;
@@ -339,7 +344,7 @@ ul li {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
   border-color: var(--primary-color);
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.12), rgba(255, 138, 138, 0.12));
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.25), rgba(255, 102, 102, 0.25));
 }
 
 @media (max-width: 768px) {
@@ -350,10 +355,10 @@ ul li {
 
 /* Experience Section Styling */
 .experience-item, .education-item {
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(168, 85, 247, 0.05));
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(168, 85, 247, 0.1));
   border-radius: 20px;
   padding: 30px;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 68, 68, 0.3);
   transition: var(--transition);
   margin-bottom: 30px;
 }
@@ -396,7 +401,7 @@ ul li {
   font-size: 18px;
   font-weight: 500;
   color: var(--text-color);
-  border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+  border-bottom: 1px solid rgba(255, 68, 68, 0.3);
   transition: var(--transition);
 }
 
@@ -433,10 +438,10 @@ ul li {
   font-size: 16px;
   font-weight: 600;
   color: var(--text-color);
-  background: rgba(255, 107, 107, 0.1);
+  background: rgba(255, 68, 68, 0.2);
   padding: 8px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 107, 107, 0.3);
+  border: 1px solid rgba(255, 68, 68, 0.5);
 }
 
 .education-details {
@@ -460,7 +465,7 @@ ul li {
   font-size: 17px;
   font-weight: 500;
   color: var(--text-color);
-  border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+  border-bottom: 1px solid rgba(255, 68, 68, 0.3);
   transition: var(--transition);
 }
 
@@ -476,10 +481,10 @@ ul li {
 /* Enhanced Project Cards */
 .project {
   margin-bottom: 50px;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(255, 138, 138, 0.05));
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 102, 102, 0.1));
   border-radius: 20px;
   padding: 30px;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 68, 68, 0.3);
   background-clip: padding-box;
   position: relative;
   transition: var(--transition);
@@ -533,7 +538,7 @@ ul li {
   max-width: 700px;
   border-radius: 15px;
   margin: 20px 0;
-  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 68, 68, 0.4);
   transition: var(--transition);
   display: block;
   margin-left: auto;
@@ -542,7 +547,7 @@ ul li {
 
 .project img:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 12px 35px rgba(255, 68, 68, 0.6);
 }
 
 .project-tech {
@@ -656,11 +661,11 @@ ul li {
 }
 
 .contact-item {
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(255, 138, 138, 0.05));
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.1), rgba(255, 102, 102, 0.1));
   padding: 25px;
   border-radius: 15px;
   text-align: center;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 68, 68, 0.3);
   transition: var(--transition);
 }
 
