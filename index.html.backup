@@ -13,7 +13,6 @@
     <p>DevOps Engineer</p>
     <nav>
       <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
@@ -66,33 +65,6 @@
           <li>🐍 Python Automation & Scripting</li>
           <li>🔒 Security Best Practices & Compliance</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>💼 Professional Experience</h2>
-    <div class="experience-item">
-      <div class="experience-header">
-        <h3 class="job-title">DevOps Engineer Intern</h3>
-        <h4 class="company-name">Co Ventech</h4>
-      </div>
-      <div class="experience-content">
-        <ul class="achievements">
-          <li>🔄 Implemented CI/CD pipelines using Jenkins and GitHub Actions for production deployments</li>
-          <li>☁️ Optimized AWS infrastructure, reducing cloud costs by 45%</li>
-          <li>🐳 Managed multi-container applications with Docker Compose</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>🎓 Education</h2>
-    <div class="education-item">
-      <div class="education-header">
-        <h3 class="degree-title">Bachelor's in Computer Engineering</h3>
-        <h4 class="university-name">Sir Syed University of Engineering and Technology</h4>
       </div>
     </div>
   </section>
@@ -276,4 +248,3 @@
 
 </body>
 </html>
-
