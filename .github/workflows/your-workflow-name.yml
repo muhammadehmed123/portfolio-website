@@ -1,5 +1,8 @@
 name: Test Webhook
-on: [workflow_dispatch]  # Allows manual triggering
+on: 
+  workflow_dispatch:  # Allows manual triggering
+  push:
+    branches: [ main ]  # Triggers on push to main branch
 
 jobs:
   test_webhook:
