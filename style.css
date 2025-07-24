@@ -1,23 +1,23 @@
-/* Enhanced CSS with Beautiful Light Red Theme */
+/* Enhanced CSS with Beautiful Professional Blue Theme */
 :root {
-  /* Beautiful Light Red Theme Colors */
-  --primary-color: #ff6b6b;
-  --secondary-color: #ff8a8a;
-  --accent-color: #ffa8a8;
+  /* Beautiful Professional Blue Theme Colors */
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --accent-color: #93c5fd;
   --purple-accent: #d946ef;
   --orange-accent: #f59e0b;
   --green-accent: #10b981;
   --text-color: #1f2937;
   --text-secondary: #6b7280;
-  --bg-color: #fef2f2;
-  --bg-secondary: #fee2e2;
+  --bg-color: #f8fafc;
+  --bg-secondary: #e2e8f0;
   --white: #ffffff;
-  --shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
-  --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.25);
+  --shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+  --shadow-hover: 0 8px 30px rgba(59, 130, 246, 0.25);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-primary: linear-gradient(135deg, #ff6b6b, #ff8a8a);
-  --gradient-secondary: linear-gradient(135deg, #ff8a8a, #ffa8a8);
-  --gradient-accent: linear-gradient(135deg, #ffa8a8, #f59e0b);
+  --gradient-primary: linear-gradient(135deg, #3b82f6, #60a5fa);
+  --gradient-secondary: linear-gradient(135deg, #60a5fa, #93c5fd);
+  --gradient-accent: linear-gradient(135deg, #93c5fd, #f59e0b);
 }
 
 * {
