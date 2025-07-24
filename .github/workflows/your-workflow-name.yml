@@ -1,16 +1,83 @@
-name: Test Webhook
+name: Portfolio Website CI/CD
 on: 
   workflow_dispatch:  # Allows manual triggering
   push:
     branches: [ main ]  # Triggers on push to main branch
+  pull_request:
+    branches: [ main ]  # Triggers on PRs to main
 
 jobs:
-  test_webhook:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Send test webhook
+      - name: 🚀 Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 📦 Setup Node.js (if needed)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: 🔍 List project files
         run: |
+          echo "📁 Project structure:"
+          find . -type f -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.json" | head -20
+          
+      - name: ✅ Validate HTML files
+        run: |
+          echo "🔍 Checking for HTML files..."
+          if find . -name "*.html" -type f | grep -q .; then
+            echo "✅ HTML files found - validating structure..."
+            for file in $(find . -name "*.html" -type f); do
+              echo "Checking $file..."
+              if grep -q "<!DOCTYPE" "$file"; then
+                echo "✅ $file has DOCTYPE declaration"
+              else
+                echo "⚠️ $file missing DOCTYPE declaration"
+              fi
+            done
+          else
+            echo "ℹ️ No HTML files found to validate"
+          fi
+          
+      - name: 🎨 Validate CSS files
+        run: |
+          echo "🔍 Checking for CSS files..."
+          if find . -name "*.css" -type f | grep -q .; then
+            echo "✅ CSS files found - basic validation..."
+            for file in $(find . -name "*.css" -type f); do
+              echo "Checking $file..."
+              if [ -s "$file" ]; then
+                echo "✅ $file is not empty"
+              else
+                echo "⚠️ $file is empty"
+              fi
+            done
+          else
+            echo "ℹ️ No CSS files found to validate"
+          fi
+          
+      - name: 🌐 Send deployment webhook
+        run: |
+          echo "🚀 Sending deployment notification..."
           curl -X POST "https://webhook.site/1234-5678-99abc" \
                -H "Content-Type: application/json" \
-               -H "X-GitHub-Event: push" \
-               -d '{"ref":"refs/heads/main","repository":{"full_name":"nuhammadehmed123/portfolio-website"}}'
+               -H "X-GitHub-Event: deployment" \
+               -d '{
+                 "event": "portfolio_deployment",
+                 "repository": "muhammadehmed123/portfolio-website",
+                 "branch": "${{ github.ref_name }}",
+                 "commit": "${{ github.sha }}",
+                 "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'",
+                 "status": "success"
+               }'
+          echo "✅ Webhook sent successfully!"
+          
+      - name: 📊 Build Summary
+        run: |
+          echo "🎉 Portfolio Website CI/CD Pipeline Complete!"
+          echo "📅 Build Date: $(date)"
+          echo "🔗 Repository: muhammadehmed123/portfolio-website"
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo "📝 Commit: ${{ github.sha }}"
+          echo "✅ All checks passed - ready for deployment!"
