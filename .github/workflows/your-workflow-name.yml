@@ -1,0 +1,13 @@
+name: Test Webhook
+on: [workflow_dispatch]  # Allows manual triggering
+
+jobs:
+  test_webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test webhook
+        run: |
+          curl -X POST "https://webhook.site/1234-5678-99abc" \
+               -H "Content-Type: application/json" \
+               -H "X-GitHub-Event: push" \
+               -d '{"ref":"refs/heads/main","repository":{"full_name":"nuhammadehmed123/portfolio-website"}}'
