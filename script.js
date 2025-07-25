@@ -1,7 +1,6 @@
 // Enhanced Portfolio JavaScript with Modern Interactive Features
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all features
-    initWelcomeBanner();
+    // Initialize all features (welcome banner removed)
     initSmoothScrolling();
     initTypingAnimation();
     initSkillProgressBars();
@@ -14,35 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticleBackground();
 });
 
-// 1. Enhanced Welcome Banner with Animation
-function initWelcomeBanner() {
-    const banner = document.createElement("div");
-    banner.id = "welcome-banner";
-    banner.innerHTML = `
-        <div class="banner-content">
-            <span class="banner-icon">🚀</span>
-            <span class="banner-text">Welcome to Muhammad Ahmed's DevOps Portfolio!</span>
-            <span class="close-banner" id="close-banner">✕</span>
-        </div>
-    `;
-    
-    banner.className = "welcome-banner slide-down";
-    document.body.prepend(banner);
-    
-    // Close functionality with fade out
-    document.getElementById("close-banner").addEventListener("click", () => {
-        banner.classList.add('fade-out');
-        setTimeout(() => banner.remove(), 300);
-    });
-    
-    // Auto-hide after 8 seconds
-    setTimeout(() => {
-        if (document.getElementById("welcome-banner")) {
-            banner.classList.add('fade-out');
-            setTimeout(() => banner.remove(), 300);
-        }
-    }, 8000);
-}
+// Welcome banner function removed
 
 // 2. Smooth Scrolling Navigation
 function initSmoothScrolling() {
