@@ -1,36 +1,54 @@
-/* Enhanced CSS with Dark Red Theme */
+/* Black Background with White Bold Text and Red Accents */
 :root {
-  /* Dark Red Theme Colors */
-  --primary-color: #dc2626;
-  --secondary-color: #ef4444;
-  --accent-color: #f87171;
+  /* Black and White Theme with Red Accents */
+  --primary-color: #ff0000;
+  --secondary-color: #cc0000;
+  --accent-color: #ff3333;
   --purple-accent: #d946ef;
   --orange-accent: #f59e0b;
   --green-accent: #10b981;
   --text-color: #ffffff;
-  --text-secondary: #d1d5db;
+  --text-secondary: #ffffff;
   --bg-color: #000000;
-  --bg-secondary: #1f1f1f;
+  --bg-secondary: #000000;
   --white: #ffffff;
-  --shadow: 0 4px 20px rgba(220, 38, 38, 0.25);
-  --shadow-hover: 0 8px 30px rgba(220, 38, 38, 0.35);
+  --shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+  --shadow-hover: 0 8px 30px rgba(255, 0, 0, 0.5);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-primary: linear-gradient(135deg, #dc2626, #ef4444);
-  --gradient-secondary: linear-gradient(135deg, #ef4444, #f87171);
-  --gradient-accent: linear-gradient(135deg, #f87171, #f59e0b);
+  --gradient-primary: linear-gradient(135deg, #ff0000, #cc0000);
+  --gradient-secondary: linear-gradient(135deg, #cc0000, #ff3333);
+  --gradient-accent: linear-gradient(135deg, #ff3333, #f59e0b);
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Make all text bolder */
-p, li, span, div {
+/* Make all text white and bold */
+p, li, span, div, a, label, input, textarea {
   font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure all section content is white */
+section * {
+  color: #ffffff !important;
+}
+
+/* Skills, experience, projects, education sections */
+.skill-item, .experience-item, .project-item, .education-item {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 0, 0, 0.3) !important;
+}
+
+.skill-item *, .experience-item *, .project-item *, .education-item * {
+  color: #ffffff !important;
 }
 
 body {
@@ -136,13 +154,14 @@ nav a:hover {
 section {
   width: 100%;
   margin: 40px 0;
-  background: var(--bg-secondary);
+  background: #000000;
   padding: 60px 40px;
   border-radius: 0;
   box-shadow: var(--shadow);
-  border: 2px solid rgba(220, 38, 38, 0.3);
+  border: 2px solid rgba(255, 0, 0, 0.5);
   transition: var(--transition);
   min-height: 500px;
+  color: #ffffff !important;
 }
 
 section:hover {
@@ -181,18 +200,18 @@ h2 {
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
   object-fit: cover;
   border: 4px solid var(--primary-color);
-  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.5);
   transition: var(--transition);
 }
 
 .profile-photo:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 12px 40px rgba(255, 0, 0, 0.7);
 }
 
 .about-text {
