@@ -1,72 +1,51 @@
-/* Enhanced CSS with Beautiful Professional Blue Theme */
+/* Enhanced CSS with Dark Red Theme */
 :root {
-  /* Beautiful Professional Blue Theme Colors */
-  --primary-color: #3b82f6;
-  --secondary-color: #60a5fa;
-  --accent-color: #93c5fd;
+  /* Dark Red Theme Colors */
+  --primary-color: #dc2626;
+  --secondary-color: #ef4444;
+  --accent-color: #f87171;
   --purple-accent: #d946ef;
   --orange-accent: #f59e0b;
   --green-accent: #10b981;
-  --text-color: #1f2937;
-  --text-secondary: #6b7280;
-  --bg-color: #f8fafc;
-  --bg-secondary: #e2e8f0;
+  --text-color: #ffffff;
+  --text-secondary: #d1d5db;
+  --bg-color: #000000;
+  --bg-secondary: #1f1f1f;
   --white: #ffffff;
-  --shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
-  --shadow-hover: 0 8px 30px rgba(59, 130, 246, 0.25);
+  --shadow: 0 4px 20px rgba(220, 38, 38, 0.25);
+  --shadow-hover: 0 8px 30px rgba(220, 38, 38, 0.35);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --gradient-primary: linear-gradient(135deg, #3b82f6, #60a5fa);
-  --gradient-secondary: linear-gradient(135deg, #60a5fa, #93c5fd);
-  --gradient-accent: linear-gradient(135deg, #93c5fd, #f59e0b);
+  --gradient-primary: linear-gradient(135deg, #dc2626, #ef4444);
+  --gradient-secondary: linear-gradient(135deg, #ef4444, #f87171);
+  --gradient-accent: linear-gradient(135deg, #f87171, #f59e0b);
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* Make all text bolder */
+p, li, span, div {
+  font-weight: 700 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900 !important;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  font-weight: 600;
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: var(--transition);
   overflow-x: hidden;
+  width: 100%;
 }
 
-/* Enhanced Welcome Banner */
-.welcome-banner {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--white);
-  padding: 15px 20px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-shadow: var(--shadow);
-  transform: translateY(-100%);
-  transition: var(--transition);
-}
-
-.welcome-banner.slide-down {
-  transform: translateY(0);
-}
-
-.welcome-banner.fade-out {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Welcome banner removed */
 
 .banner-icon {
   font-size: 20px;
@@ -135,31 +114,33 @@ nav a {
   margin: 0 15px;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 800;
-  font-size: 20px;
-  padding: 12px 24px;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 15px 30px;
   border-radius: 30px;
   transition: var(--transition);
   position: relative;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  border: 2px solid transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
 section {
-  max-width: 1200px;
-  margin: 80px auto;
-  background: var(--white);
-  padding: 60px;
-  border-radius: 25px;
+  width: 100%;
+  margin: 40px 0;
+  background: var(--bg-secondary);
+  padding: 60px 40px;
+  border-radius: 0;
   box-shadow: var(--shadow);
-  border: 2px solid rgba(255, 107, 107, 0.2);
+  border: 2px solid rgba(220, 38, 38, 0.3);
   transition: var(--transition);
   min-height: 500px;
 }
@@ -205,13 +186,13 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--primary-color);
-  box-shadow: 0 8px 30px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
   transition: var(--transition);
 }
 
 .profile-photo:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.5);
 }
 
 .about-text {
