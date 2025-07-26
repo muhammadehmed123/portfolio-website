@@ -199,20 +199,7 @@ h2 {
   flex-shrink: 0;
 }
 
-.profile-photo {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 4px solid var(--primary-color);
-  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.5);
-  transition: var(--transition);
-}
-
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(255, 0, 0, 0.7);
-}
+/* Profile photo section removed */
 
 .about-text {
   flex: 1;
@@ -860,7 +847,7 @@ nav a:hover {
   transition: var(--transition);
   border-radius: 12px;
   overflow: hidden;
-  background: var(--white);
+  background: #000000;
   box-shadow: var(--shadow);
 }
 
@@ -922,7 +909,7 @@ nav a:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: var(--white);
+  background: #000000;
   border: 2px solid var(--primary-color);
   border-radius: 50%;
   width: 50px;
@@ -961,7 +948,7 @@ nav a:hover {
 }
 
 .contact-form {
-  background: var(--white);
+  background: #000000;
   padding: 30px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -1125,7 +1112,7 @@ img.loaded {
 section {
   max-width: 960px;
   margin: 40px auto;
-  background: var(--white);
+  background: #000000;
   padding: 30px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -1163,7 +1150,7 @@ h2::after {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: var(--white);
+    background: #000000;
     flex-direction: column;
     justify-content: center;
     align-items: center;
